@@ -41,15 +41,12 @@ public class Radio {
         }
         currentStation = 0;
     }
-
-    public void prev() {
+    public void prevStation() {
 
         if (currentStation > 0) {
             currentStation--;
-
         } else {
-            currentStation = 9;
-
-        }
+        currentStation = 9;
     }
+}
 }
