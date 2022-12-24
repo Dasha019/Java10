@@ -5,8 +5,6 @@ import org.junit.jupiter.api.Test;
 
 public class RadioTest {
 
-    private int currentStation;
-
     @Test
     public void nextStation() {
         Radio radio = new Radio();
@@ -165,13 +163,13 @@ public class RadioTest {
     }
 
     @Test
-    public void setCurrentStation() {
-        Radio radio = new Radio();
+    public void setCurrentStationMax() {
+        Radio cond = new Radio();
 
-        this.currentStation = 10;
+        cond.setCurrentStationMax(10);
 
         int expected = 0;
-        int actual = radio.getCurrentStation();
+        int actual = cond.getCurrentStation();
 
         Assertions.assertEquals(expected, actual);
 
