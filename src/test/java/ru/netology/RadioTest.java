@@ -152,7 +152,7 @@ public class RadioTest {
     @Test
     public void nextStationlowMax() {
         Radio radio = new Radio();
-        radio.setCurrentStation(10);
+        radio.setCurrentStation(9);
 
         radio.nextStation();
 
@@ -163,13 +163,13 @@ public class RadioTest {
     }
 
     @Test
-    public void setCurrentStationMax() {
-        Radio cond = new Radio();
+    public void setCurrentStation() {
+        Radio radio = new Radio();
 
-        cond.setCurrentStationMax(10);
+        radio.setCurrentStation(10);
 
         int expected = 0;
-        int actual = cond.getCurrentStation();
+        int actual = radio.getCurrentStation();
 
         Assertions.assertEquals(expected, actual);
 

@@ -12,49 +12,45 @@ public class Radio {
         if (currentStation < 0) {
             return;
         }
-            this.currentStation = currentStation;
-        }
-
-    public void setCurrentStationMax (int currentStation) {
         if (currentStation > 9) {
             return;
         }
         this.currentStation = currentStation;
     }
 
-        public int getCurrentVolume () {
-            return currentVolume;
+    public int getCurrentVolume() {
+        return currentVolume;
+    }
+
+    public void setCurrentVolume(int currentVolume) {
+        if (currentVolume < 0) {
+            return;
         }
+        this.currentVolume = currentVolume;
+    }
 
-        public void setCurrentVolume ( int currentVolume){
-            if (currentVolume < 0) {
-                return;
-            }
-            this.currentVolume = currentVolume;
+    public void increaseVolume() {
+        if (currentVolume < 10) {
+            currentVolume++;
+            return;
         }
+        currentVolume = 10;
+    }
 
-        public void increaseVolume () {
-            if (currentVolume < 10) {
-                currentVolume++;
-                return;
-            }
-            currentVolume = 10;
+    public void nextStation() {
+        if (currentStation < 9) {
+            currentStation++;
+            return;
         }
+        currentStation = 0;
+    }
 
-        public void nextStation () {
-            if (currentStation < 9) {
-                currentStation++;
-                return;
-            }
-            currentStation = 0;
-        }
+    public void prevStation() {
 
-        public void prevStation () {
-
-            if (currentStation > 0) {
-                currentStation--;
-            } else {
-                currentStation = 9;
-            }
+        if (currentStation > 0) {
+            currentStation--;
+        } else {
+            currentStation = 9;
         }
     }
+}
